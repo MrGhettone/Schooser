@@ -1,0 +1,68 @@
+.nav-bar
+{
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2em;
+    
+    .menu-title
+    {
+        a
+        {
+            color: $gray5;
+            text-decoration: none;
+            display: block;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        a:hover
+        {
+            color: $gray3;
+        }
+    }
+    
+    .menu-toggler:hover
+    {
+        color: $gray3;
+    }
+
+    .menu-toggler
+    {
+        border: 0.05em solid $gray5;
+        border-radius: 0.2em;
+        padding: 0.4em;
+        color: $gray5;
+        i
+        {
+            font-size: 1em;
+        }
+    }
+    
+    .menu-list
+    {
+        position: absolute;
+        top: 2em;
+        right: 10%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 10%;
+        
+        li
+        {
+            height: 2em;
+
+            a
+            {
+                color: $gray5;
+                text-decoration: none;
+                display: block;
+                padding: 0.5em;
+                font-size: 1em;
+                text-align: right;
+            }
+        }
+    }
+}

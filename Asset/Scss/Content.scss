@@ -1,0 +1,50 @@
+.cf::after 
+{
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.container
+{
+    margin: 0 10%;
+}
+
+body,html
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $gray1;
+}
+
+.errore
+{
+    color: $red;
+}
+
+.m-0
+{
+    margin: 0;
+}
+
+.btn
+{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-delete
+{
+    background-color: $red;
+    border: 2px solid $red;
+    color: white;
+}
+
+.btn-success
+{
+    background-color: $green;
+    border: 2px solid $green;
+    color: white;
+}

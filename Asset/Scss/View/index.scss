@@ -1,0 +1,21 @@
+div#app
+{
+    padding: 5px;
+    text-align: center;
+    div#form-ins-scielta
+    {
+        padding: 5px;
+        input
+        {
+            margin: 0;
+            display: inline;
+        }
+
+        #ins_scielta
+        {
+            margin: 0;
+            display: inline;
+            border-radius:  0 20% 20% 0;
+        }
+    }
+}
