@@ -1,21 +1,40 @@
-div#app
+#app
 {
-    padding: 5px;
     text-align: center;
-    div#form-ins-scielta
+    #ins_scielta
     {
-        padding: 5px;
-        input
+        margin: 0;
+        padding: 0;
+        border: 0;
+        float: inline-start;
+        width: 20%;
+        border-radius: 0 50% 50% 0;
+        height: 1.5em;
+        &:hover
         {
-            margin: 0;
-            display: inline;
+            border-left: 3px solid $gray4;
+            border-bottom: 3px solid $gray4;
         }
-
-        #ins_scielta
-        {
-            margin: 0;
-            display: inline;
-            border-radius:  0 20% 20% 0;
-        }
+    }
+    
+    #descr_scielta
+    {
+        margin: 0;
+        padding: 0 0.5em;
+        float: inline-start;
+        width: 60%;
+        height: 1.5em;
+    }
+    
+    #left_side
+    {
+        margin: 0;
+        padding: 0;
+        float: inline-start;
+        width: 20%;
+        height: 1.5em;
+        background-color: $gray2;
+        border-bottom: 3px solid $gray4;
+        border-radius: 50% 0 0 50%;
     }
 }

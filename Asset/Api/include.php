@@ -1,10 +1,11 @@
 <?php
-require_once '../Classes/autoload.php';
+require_once $_ENV['basePath'].'Asset/Classes/autoload.php';
 
-$body = file_get_contents('php://input');
-$_REQUEST = json_decode($body,true);
+$_REQUEST = json_decode(file_get_contents('php://input'),true);
+foreach(json_decode(file_get_contents('C:/Program Files/xampp/htdocs/Ciuser/Asset/Api/env.json'),true) as $key => $value)
+    $_ENV[$key] = $value;
 
-$DB = new DB('localhost','ciuser','root','');
+$DB = new DB($_ENV['server'],$_ENV['db'],$_ENV['dbLogin'],$_ENV['pwdLogin']);
 
 session_start();
 if(empty($_SESSION['id']))

@@ -1,3 +1,42 @@
+$(window).on('resize',function()
+{
+    if(window.innerWidth < layout_breakpoint_middle)
+    {
+        $('.middle-show').show();
+        $('.middle-hide').hide();
+
+        if(window.innerWidth < layout_breakpoint_small)
+        {
+            $('.small-show').show();
+            $('.small-hide').hide();
+        }
+        else
+        {
+            $('.small-show').hide();
+            $('.small-hide').show();
+        }
+    }
+    else
+    {
+        $('.middle-show').hide();
+        $('.middle-hide').show();
+    }
+});
+
+$(document).click(function(event)
+{
+    var outsideClick = !$('#menu-list')[0].contains(event.target);
+    outsideClick = !$('#menu-toggler')[0].contains(event.target);
+
+    if(outsideClick)
+        $('#menu-list').toggle(600);
+});
+
+$(document).ready(function()
+{
+    $(window).resize();
+})
+
 function getFormData(element_id)
 {
     var dati = $('#'+element_id).find('input');
@@ -8,7 +47,7 @@ function getFormData(element_id)
     {
         var element = $(value);
         var parent = element.parent();
-        var display_errore = parent.find('div.errore');
+        var display_errore = parent.find('.errore');
         if(element.prop('required') && element.val() == '')
         {
             errore = true;
@@ -26,7 +65,7 @@ function getFormData(element_id)
     {
         var element = $(value);
         var parent = element.parent();
-        var display_errore = parent.find('div.errore');
+        var display_errore = parent.find('.errore');
         if(element.prop('required') && element.val() == '')
         {
             errore = true;

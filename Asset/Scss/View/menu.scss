@@ -1,68 +1,109 @@
-.nav-bar
+#nav-bar
 {
-    height: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.2em;
-    
-    .menu-title
+    height: 1.5em;
+    margin-bottom: 0.5em;
+    div
     {
-        a
-        {
-            color: $gray5;
-            text-decoration: none;
-            display: block;
-            padding: 0.5em;
-            text-align: center;
-        }
+        display: inline-block;
+    }
 
-        a:hover
+    .menu-text
+    {
+        color: $gray5;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.5em 0.5em 0 0.5em;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        line-height: 100%;
+        &:hover
         {
             color: $gray3;
         }
-    }
-    
-    .menu-toggler:hover
-    {
-        color: $gray3;
-    }
 
-    .menu-toggler
-    {
-        border: 0.05em solid $gray5;
-        border-radius: 0.2em;
-        padding: 0.4em;
-        color: $gray5;
-        i
+        @media(max-width: $layout-breakpoint-middle)
         {
-            font-size: 1em;
+            @media(max-width: $layout-breakpoint-small)
+            {
+                padding: 0;
+                padding-top: 0.5em;
+            }
         }
     }
-    
-    .menu-list
-    {
-        position: absolute;
-        top: 2em;
-        right: 10%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        width: 10%;
-        
-        li
-        {
-            height: 2em;
 
-            a
+    #menu-list
+    {
+        padding-left: 0.5em;
+        ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            li
             {
-                color: $gray5;
-                text-decoration: none;
-                display: block;
-                padding: 0.5em;
-                font-size: 1em;
-                text-align: right;
+                height: 100%;
+                a
+                {
+                    font-size: 0.8em;
+                }
             }
+        }
+
+        @media(max-width: $layout-breakpoint-middle)
+        {
+            position: absolute;
+            top: 2em;
+            right: 5%;
+            width: 10%;
+            padding: 0;
+            ul
+            {
+                flex-direction: column;
+                li
+                {
+                    height: 2em;
+                    a
+                    {
+                        height: 2em;
+                        padding: 0.5em 0;
+                        font-size: 1em;
+                    }
+                }
+            }
+            
+            @media(max-width: $layout-breakpoint-small)
+            {
+                right: 0;
+                width: 100%;
+                background-color: $gray1;
+            }
+        }
+    }
+
+    #menu-toggler
+    {
+        display: none;
+        @media(max-width: $layout-breakpoint-middle)
+        {
+            display: block;
+            color: $gray5;
+        }
+    }
+
+    @media(max-width: $layout-breakpoint-middle)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0.3em;
+        @media(max-width: $layout-breakpoint-small)
+        {
+            margin-bottom: 0;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
         }
     }
 }
